@@ -1,0 +1,78 @@
+$point-color: #333;
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: whitesmoke;
+  opacity: 0.9;
+  z-index: 20;
+  display: none;
+  transition: display 0.3s ease;
+  &_content {
+    width: 60%;
+    padding-top: 80px;
+    margin: 0 auto;
+    &-wrapper {
+      text-align: center;
+      margin-bottom: 30px;
+      &-ti {
+        display: inline-block;
+        font-size: 1.2em;
+        color: $point-color;
+        margin: 0 0 10px;
+        &:hover {
+          cursor: pointer;
+          color: darkgoldenrod;
+        }
+      }
+    }
+  }
+}
+.menu_show {
+  display: block;
+}
+
+.mobile_menu {
+  position: fixed;
+  top: 25px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  z-index: 30;
+  &-wrapper {
+    transform: translate(25%, 70%);
+  }
+  &-ber {
+    display: block;
+    width: 27px;
+    height: 2px;
+    margin-bottom: 8px;
+    background-color: $point-color;
+    transition: all 0.3s ease-out;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: gainsboro;
+  }
+}
+.menu_animate .mobile_menu-wrapper {
+  > span {
+    &:nth-child(1) {
+      transform: translateY(10px) rotate(135deg);
+    }
+    &:nth-child(2) {
+      opacity: 0;
+      transform: translateX(-12px);
+    }
+    &:nth-child(3) {
+      transform: translateY(-10px) rotate(-135deg);
+    }
+  }
+}

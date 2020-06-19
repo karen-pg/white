@@ -1,0 +1,160 @@
+$pb-sm: 20px;
+$pb-lg: 50px;
+$mb-sm: 35px;
+$mb-md: 50px;
+$mb-lg: 70px;
+$mb-xl: 90px;
+
+.tab_container-base {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+$text: 15px;
+
+hr {
+  @extend .tab_container-base;
+}
+// 750up*****
+
+body {
+  padding: $pb-lg 0;
+}
+
+header {
+  @extend .tab_container-base;
+  height: auto;
+  padding-bottom: $pb-sm;
+  margin-bottom: $mb-sm;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: white;
+  opacity: 0.9;
+  .desc_menu {
+    display: flex;
+    height: 70px;
+  }
+  .mobile_menu {
+    display: none;
+  }
+}
+.int {
+  &_image {
+    @extend .tab_container-base;
+    margin-bottom: $mb-md;
+  }
+  &_text {
+    @extend .tab_container-base;
+    margin-bottom: $mb-xl;
+    > p {
+      font-size: 26px;
+      line-height: 2.3em;
+    }
+  }
+}
+
+.posts {
+  @extend .tab_container-base;
+  &_item {
+    margin-bottom: $mb-md;
+    &-date p {
+      font-size: $text;
+    }
+    &-text {
+      > h3 {
+        margin: 0 0 14px;
+        font: {
+          weight: normal;
+          size: 22px;
+        }
+      }
+      > p {
+        font-size: $text;
+        line-height: 1.8em;
+      }
+    }
+  }
+  &_change {
+    margin-bottom: $mb-lg;
+    &-btn {
+      font-size: $text;
+      &.rm {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.other {
+  @extend .tab_container-base;
+}
+.profile {
+  margin-bottom: $mb-lg;
+  &_content {
+    margin-bottom: $mb-sm;
+  }
+}
+
+.profile_detail p,
+.footer p {
+  font-size: $text;
+}
+
+.footer {
+  margin-bottom: $mb-xl * 2;
+  p:nth-child(1) {
+    margin-bottom: $mb-sm;
+  }
+}
+
+.same {
+  margin-bottom: $mb-lg;
+  &-la {
+    font-size: $text;
+    margin-bottom: $mb-sm;
+  }
+  &-ti {
+    font-size: $text + 2px;
+  }
+}
+
+.near_posts {
+  &-content {
+    &-title {
+      margin: 0 0 7px;
+    }
+    &-date {
+      font-size: $text;
+      margin: 0;
+    }
+  }
+}
+
+.category {
+  &_titles {
+    margin-bottom: $mb-lg;
+  }
+  .search {
+    &-text {
+      padding: 10px;
+      width: 40%;
+    }
+  }
+}
+
+footer {
+  @extend .tab_container-base;
+  padding-top: $pb-lg;
+  .footer {
+    &-icons {
+      margin-bottom: $mb-sm;
+    }
+    &-text {
+      > p {
+        font-size: $text;
+      }
+    }
+  }
+}
